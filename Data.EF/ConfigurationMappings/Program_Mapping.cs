@@ -14,7 +14,7 @@ namespace Data.EF.ConfigurationMappings
         public void Configure(EntityTypeBuilder<Program> builder)
         {
             builder.HasKey(t => t.Id);
-            builder.ToTable("Programs");
+            builder.ToTable("Program");
             builder.Property(t => t.Id).HasColumnName("Id").UseNpgsqlIdentityColumn();
             builder.Property(t => t.Name).IsRequired().HasColumnName("Name").HasMaxLength(100);
         }
